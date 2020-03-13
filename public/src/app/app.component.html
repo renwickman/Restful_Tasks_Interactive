@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restful Tasks API</title>
+</head>
+<body>
+  <h1>Restful Tasks API</h1>
+  <button (click)="onButtonClick($event)">GET ALL TASKS!</button>
+
+  <p *ngFor="let task of tasks">
+    <li>{{task.title}}  <button (click)="onDescriptionClick(task._id)">Show</button></li>
+    </p>
+
+
+  <p *ngIf="tasktoshow ">
+    <li>{{tasktoshow.title}} - {{tasktoshow.description}}</li>
+    </p>
+
+
+
+</body>
+</html>
